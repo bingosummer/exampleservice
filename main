@@ -6,10 +6,6 @@ environment = process.argv[2]
 operation = process.argv[3]
 parameters = process.argv[4]
 
-console.log(environment);
-console.log(operation);
-console.log(parameters);
-
 if (operation == "Catalog") {
   var data = fs.readFileSync('catalog.json');
   console.log(data.toString());
