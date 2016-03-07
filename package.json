@@ -1,0 +1,21 @@
+{
+  "name": "exampleservice",
+  "version": "0.0.1",
+  "description": "This is an example service module which is called by azure-meta-service-broker",
+  "main": "main",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bingosummer/exampleservice"
+  },
+  "author": "Bin Xia",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/bingosummer/exampleservice/issues"
+  }
+}

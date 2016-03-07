@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+
+environment = process.argv[2]
+operation = process.argv[3]
+parameters = process.argv[4]
+
+console.log(environment);
+console.log(operation);
+console.log(parameters);
+
+if (operation == "Catalog") {
+  var data = fs.readFileSync('catalog.json');
+  console.log(data.toString());
+}
+
+if (operation == "Provision") {
+  var obj = JSON.parse(parameters); 
+  console.log(obj.id);
+}
+
+if (operation == "Poll") {
+  var data = {
+    "state": "succeeded",
+    "description": "An example service instance is provisioned."
+  }
+  console.log(data.toString());
+}
+if (operation == "Deprovision") {
+  dummy();
+}
+
+if (operation == "Bind") {
+  dummy();
+}
+
+if (operation == "Unbind") {
+  dummy();
+}
+
+function dummy() {
+  for(var i = 0; i < 100; i++) {
+  }
+}

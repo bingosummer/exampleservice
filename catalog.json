@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "name": "exampleservice",
+      "id": "11111111-37b6-4587-8127-8f9ee8b33fea",
+      "description": "An example service",
+      "requires": [],
+      "tags": [
+        "Azure"
+      ],
+      "bindable": true,
+      "metadata": {
+        "displayName": "Azure Example Service",
+        "imageUrl": "http://catgifpage.com/cat.gif",
+        "longDescription": "An example service",
+        "providerDisplayName": "Microsoft",
+        "documentationUrl": "https://github.com/bingosummer/exampleservice",
+        "supportUrl": "https://github.com/bingosummer/exampleservice/issues"
+      },
+      "dashboard_client": {
+        "id": "<sso-test>",
+        "secret": "<sso-secret>",
+        "redirect_uri": "http://example.com"
+      },
+      "plan_updateable": true,
+      "plans": [
+        {
+          "name": "default",
+          "id": "22222222-fb60-4b70-af99-8ecc4896b3cf",
+          "description": "An example service",
+          "metadata": {
+            "cost": 0,
+            "bullets": ["Unlimited number of objects"]
+          }
+        }
+      ]
+    }
+  ]
+}
