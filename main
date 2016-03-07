@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const util = require('util');
 
 environment = process.argv[2]
 operation = process.argv[3]
@@ -17,11 +18,12 @@ if (operation == "Provision") {
 }
 
 if (operation == "Poll") {
+  var obj = JSON.parse(parameters); 
   var data = {
     "state": "succeeded",
-    "description": "An example service instance is provisioned."
+    "description": util.format("An example service instance %s is provisioned.", obj.id)
   }
-  console.log(data.toString());
+  console.log(JSON.stringify(data));
 }
 if (operation == "Deprovision") {
   dummy();
